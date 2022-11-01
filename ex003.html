@@ -4,87 +4,108 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="estilo.css">
     <script src="scripts.js"></script>
     <title>Document</title>
-    <style>
-        body {
-            font: normal 10pt Arial;
-        }
-
-        table, th, td {
-            border: 1px solid black;
-            border-collapse: collapse;
-            text-align: center;
-            vertical-align: center;
-        }
-
-        input {
-            width: 50%;
-        }
-
-        input[type=reset] {
-            width: 10%;
-        }
-
-        input[type=submit] {
-            width: 10%;
-        }
-    </style>
 
 </head>
 <body>
-    <h1 id="titulo">Lançamento de Notas</h1>
+    <header>
+        <div class="navbar">
+            <a href="#home">Home</a>
+            <div class="subnav">
+              <button class="subnavbtn">About <i class="fa fa-caret-down"></i></button>
+              <div class="subnav-content">
+                <a href="#company">Company</a>
+                <a href="#team">Team</a>
+                <a href="#careers">Careers</a>
+              </div>
+            </div> 
+            <div class="subnav">
+              <button class="subnavbtn">Services <i class="fa fa-caret-down"></i></button>
+              <div class="subnav-content">
+                <a href="#bring">Bring</a>
+                <a href="#deliver">Deliver</a>
+                <a href="#package">Package</a>
+                <a href="#express">Express</a>
+              </div>
+            </div> 
+            <div class="subnav">
+              <button class="subnavbtn">Partners <i class="fa fa-caret-down"></i></button>
+              <div class="subnav-content">
+                <a href="#link1">Link 1</a>
+                <a href="#link2">Link 2</a>
+                <a href="#link3">Link 3</a>
+                <a href="#link4">Link 4</a>
+              </div>
+            </div>
+            <a href="#contact">Contact</a>
+          </div>
+          
+          <div style="padding:0 16px">
+            <h3>Subnav/dropdown menu inside a Navigation Bar</h3>
+            <p>Hover over the "about", "services" or "partners" link to see the sub navigation menu.</p>
+          </div>
+    </header>
 
-    <label for="cursos">Selecione a disciplina</label>
-    <select name="cursos" id="cursos">
-        <option value="1" selected> Introdução à informática</option>
-        <option value="2">Linguagens de Programação</option>
-        <option value="3">Programação de Computadores</option>
-    </select>
-    <br>
-    <br>
-    <form>
-        <table>
-            <tr>
-                <th style="width: 20%">Nome do Aluno</th>
-                <th>Prova 1</th>
-                <th>Prova 2</th>
-                <th>Exame</th>
-                <th>Média</th>
-                <th>Faltas</th>
-            </tr>
-            <tr>
-                <td>Joana da Silva</td>
-                <td><input id="j1" type="number" onkeyup="media();"></td>
-                <td><input id="j2" type="number" onkeyup="media();"></td>
-                <td><input id="j3" type="number" onkeyup="media();"></td>
-                <td><input id="j4" readonly></td>
-                <td><input id="j5" type="number" min="0" max="16"></td>
-            </tr>
-            <tr>
-                <td>Maria do Socorro</td>
-                <td><input id="m1" type="number" onkeyup="media();"></td>
-                <td><input id="m2" type="number" onkeyup="media();"></td>
-                <td><input id="m3" type="number" onkeyup="media();"></td>
-                <td><input id="m4" readonly></td>
-                <td><input id="m5" type="number" min="0" max="16"></td>
-            </tr>
-            <tr>
-                <td>Pedro Santos</td>
-                <td><input id="p1" type="number" onkeyup="media();"></td>
-                <td><input id="p2" type="number" onkeyup="media();"></td>
-                <td><input id="p3" type="number" onkeyup="media();"></td>
-                <td><input id="p4" readonly></td>
-                <td><input id="p5" type="number" min="0" max="16"></td>
-            </tr>
-        </table>
-        <br>
-        <input type="submit" value="Salvar">
-        <input type="reset" value="Limpar">
+    <main>
+        <h1 id="titulo">Lançamento de Notas</h1>
+
+        <label for="cursos">Selecione a disciplina</label>
+        <select name="cursos" id="cursos">
+            <option value="1" selected> Introdução à informática</option>
+            <option value="2">Linguagens de Programação</option>
+            <option value="3">Programação de Computadores</option>
+        </select>
         <br>
         <br>
-    </form>
-    <a href="http://www.google.com.br">Link para Google</a><br>
-    <a href="#titulo">Voltar para o título</a>
+        <form>
+            <table>
+                <tr>
+                    <th style="width: 20%">Nome do Aluno</th>
+                    <th>Prova 1</th>
+                    <th>Prova 2</th>
+                    <th>Exame</th>
+                    <th>Média</th>
+                    <th>Faltas</th>
+                </tr>
+                <tr>
+                    <td>Joana da Silva</td>
+                    <td><input id="j1" type="number" onkeyup="media();"></td>
+                    <td><input id="j2" type="number" onkeyup="media();"></td>
+                    <td><input id="j3" type="number" onkeyup="media();"></td>
+                    <td><input id="j4" readonly></td>
+                    <td><input id="j5" type="number" min="0" max="16"></td>
+                </tr>
+                <tr>
+                    <td>Maria do Socorro</td>
+                    <td><input id="m1" type="number" onkeyup="media();"></td>
+                    <td><input id="m2" type="number" onkeyup="media();"></td>
+                    <td><input id="m3" type="number" onkeyup="media();"></td>
+                    <td><input id="m4" readonly></td>
+                    <td><input id="m5" type="number" min="0" max="16"></td>
+                </tr>
+                <tr>
+                    <td>Pedro Santos</td>
+                    <td><input id="p1" type="number" onkeyup="media();"></td>
+                    <td><input id="p2" type="number" onkeyup="media();"></td>
+                    <td><input id="p3" type="number" onkeyup="media();"></td>
+                    <td><input id="p4" readonly></td>
+                    <td><input id="p5" type="number" min="0" max="16"></td>
+                </tr>
+            </table>
+            <br>
+            <input type="submit" value="Salvar">
+            <input type="reset" value="Limpar">
+            <br>
+            <br>
+        </form>
+        <a href="http://www.google.com.br">Link para Google</a><br>
+        <a href="#titulo">Voltar para o título</a>
+    </main>
+    <footer>
+        
+    </footer>
 </body>
 </html>
