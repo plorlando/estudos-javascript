@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font: normal 10pt Arial;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            text-align: center;
+            vertical-align: center;
+        }
+
+        input {
+            width: 50%;
+        }
+
+        input[type=reset] {
+            width: 10%;
+        }
+
+        input[type=submit] {
+            width: 10%;
+        }
+    </style>
+
+
+    <script>
+        function media() {
+            var pj1 = document.getElementById('j1').value;
+            var pj2 = document.getElementById('j2').value;
+            var pj3 = document.getElementById('j3').value;
+            var jtotal;
+            var jmedia;
+
+            if(pj1 !="" && pj2 !="" && pj3 !="") {
+                jtotal = parseFloat(pj1)+parseFloat(pj2)+parseFloat(pj3);
+		        jmedia = jtotal/3;
+ 
+		        document.getElementById('j4').value = jmedia.toFixed(2);	
+	        }
+
+            var pm1 = document.getElementById('m1').value;
+            var pm2 = document.getElementById('m2').value;
+            var pm3 = document.getElementById('m3').value;
+            var mtotal;
+            var mmedia;
+
+            if(pm1 !="" && pm2 !="" && pm3 !="") {
+                mtotal = parseFloat(pm1)+parseFloat(pm2)+parseFloat(pm3);
+		        mmedia = mtotal/3;
+ 
+		        document.getElementById('m4').value = mmedia.toFixed(2);	
+	        }
+
+            var pp1 = document.getElementById('p1').value;
+            var pp2 = document.getElementById('p2').value;
+            var pp3 = document.getElementById('p3').value;
+            var ptotal;
+            var pmedia;
+
+            if(pp1 !="" && pp2 !="" && pp3 !="") {
+                ptotal = parseFloat(pp1)+parseFloat(pp2)+parseFloat(pp3);
+		        pmedia = ptotal/3;
+ 
+		        document.getElementById('p4').value = pmedia.toFixed(2);	
+	        }
+        }
+
+    </script>
+
+
+</head>
+<body>
+    <h1 id="titulo">Lançamento de Notas</h1>
+
+    <label for="cursos">Selecione a disciplina</label>
+    <select name="cursos" id="cursos">
+        <option value="1" selected> Introdução à informática</option>
+        <option value="2">Linguagens de Programação</option>
+        <option value="3">Programação de Computadores</option>
+    </select>
+    <br>
+    <br>
+    <form>
+        <table>
+            <tr>
+                <th style="width: 20%">Nome do Aluno</th>
+                <th>Prova 1</th>
+                <th>Prova 2</th>
+                <th>Exame</th>
+                <th>Média</th>
+                <th>Faltas</th>
+            </tr>
+            <tr>
+                <td>Joana da Silva</td>
+                <td><input id="j1" type="number" onkeyup="media();"></td>
+                <td><input id="j2" type="number" onkeyup="media();"></td>
+                <td><input id="j3" type="number" onkeyup="media();"></td>
+                <td><input id="j4" readonly></td>
+                <td><input id="j5" type="number" min="0" max="16"></td>
+            </tr>
+            <tr>
+                <td>Maria do Socorro</td>
+                <td><input id="m1" type="number" onkeyup="media();"></td>
+                <td><input id="m2" type="number" onkeyup="media();"></td>
+                <td><input id="m3" type="number" onkeyup="media();"></td>
+                <td><input id="m4" readonly></td>
+                <td><input id="m5" type="number" min="0" max="16"></td>
+            </tr>
+            <tr>
+                <td>Pedro Santos</td>
+                <td><input id="p1" type="number" onkeyup="media();"></td>
+                <td><input id="p2" type="number" onkeyup="media();"></td>
+                <td><input id="p3" type="number" onkeyup="media();"></td>
+                <td><input id="p4" readonly></td>
+                <td><input id="p5" type="number" min="0" max="16"></td>
+            </tr>
+        </table>
+        <br>
+        <input type="submit" value="Salvar">
+        <input type="reset" value="Limpar">
+        <br>
+        <br>
+    </form>
+    <a href="http://www.google.com.br">Link para Google</a><br>
+    <a href="#titulo">Voltar para o título</a>
+</body>
+</html>
